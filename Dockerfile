@@ -22,6 +22,7 @@ COPY src ./src
 COPY vite.config.ts ./
 COPY tsconfig.json ./
 COPY tsconfig.app.json ./
+COPY tsconfig.node.json ./
 
 # Build the app for production
 RUN npm run build
