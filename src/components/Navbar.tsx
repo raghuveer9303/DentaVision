@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
@@ -30,35 +29,26 @@ const Navbar = () => {
               </span>
             </Link>
           </div>
-          
-          {/* Desktop navigation */}
-          <div className="hidden md:flex md:items-center md:space-x-4">
+          {/* Desktop nav */}
+          <div className="hidden md:flex items-center space-x-4">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={cn(
-                  "px-3 py-2 rounded-md text-sm font-medium transition-colors",
-                  "text-gray-700 hover:bg-dentapurple-light hover:text-dentapurple"
-                )}
+                className="px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-dentapurple-light hover:text-dentapurple"
               >
                 {item.name}
               </Link>
             ))}
           </div>
-
           {/* Mobile menu button */}
           <div className="flex items-center md:hidden">
             <button
               onClick={toggleMobileMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-dentapurple"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-dentapurple hover:bg-dentapurple-light focus:outline-none"
+              aria-label="Toggle menu"
             >
-              <span className="sr-only">Open main menu</span>
-              {mobileMenuOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
-              )}
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
