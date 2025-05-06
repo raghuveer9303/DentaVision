@@ -11,27 +11,14 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
-# Copy index.html and public assets before build
-COPY index.html ./
-COPY public ./public
-
-# Copy source files before build
-COPY src ./src
-
-# Copy Vite and TS config files before build
-COPY vite.config.ts ./
-COPY tsconfig.json ./
-COPY tsconfig.app.json ./
-COPY tsconfig.node.json ./
+# Copy all files (source, configs, public, etc.)
+COPY . .
 
 # Build the app for production
 RUN npm run build
 
 # Install a lightweight static server
 RUN npm install -g serve
-
-# Copy all files
-COPY . .
 
 # Expose the port Vite preview/serve uses by default
 EXPOSE 4173
