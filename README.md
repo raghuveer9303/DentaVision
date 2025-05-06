@@ -1,73 +1,75 @@
-# Welcome to your Lovable project
+# DentaVision
 
-## Project info
+AI-Powered Oral Disease Detection
 
-**URL**: https://lovable.dev/projects/42f81af7-6310-42c9-9a86-112c42b4e849
+## Project Info
 
-## How can I edit this code?
+DentaVision is a web application that leverages AI to assist in the detection of oral diseases from images. The project features a modern React frontend styled with Tailwind CSS and shadcn-ui components.
 
-There are several ways of editing your application.
+## Getting Started
 
-**Use Lovable**
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- npm (v9 or higher recommended)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/42f81af7-6310-42c9-9a86-112c42b4e849) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Installation
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone https://github.com/raghuveer9303/DentaVision.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd Denta-Vision-frontend
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Running the Development Server
+
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will be available at `http://localhost:5173` by default.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project Structure
+- `src/components/` – Reusable UI components
+- `src/pages/` – Main application pages (Home, Dataset, Models, Results, Team, NotFound)
+- `src/hooks/` – Custom React hooks
+- `src/lib/` – Utility functions
+- `public/` – Static assets
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
+## Technologies Used
 - React
-- shadcn-ui
+- TypeScript
+- Vite
 - Tailwind CSS
+- shadcn-ui
 
-## How can I deploy this project?
+## Deployment to GitHub Pages
 
-Simply open [Lovable](https://lovable.dev/projects/42f81af7-6310-42c9-9a86-112c42b4e849) and click on Share -> Publish.
+To deploy this app to GitHub Pages:
 
-## Can I connect a custom domain to my Lovable project?
+1. Make sure your latest code is pushed to your GitHub repository.
+2. Update the `base` option in `vite.config.ts` to match your repo name (already set to `/Denta-Vision-frontend/`).
+3. Run the following command:
 
-Yes, you can!
+```sh
+npm run deploy
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+This will build the app and publish the `dist` folder to the `gh-pages` branch. Your site will be available at:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+```
+https://<your-github-username>.github.io/Denta-Vision-frontend/
+```
+
+For more details, see the [Vite deployment guide](https://vitejs.dev/guide/static-deploy.html#github-pages).
+
+## License
+© 2025 DentaVision. All rights reserved.
+
+---
+
+For deployment or further documentation, please refer to your preferred hosting provider's instructions or contact the project maintainer.
