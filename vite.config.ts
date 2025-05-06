@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: "/DentaVision/", // Set base for GitHub Pages
+  base: "/", // Set base for GitHub Pages
   plugins: [
     react(),
     mode === 'development' &&
