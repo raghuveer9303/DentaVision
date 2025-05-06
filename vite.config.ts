@@ -7,7 +7,6 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => ({
   server: {
     host: "0.0.0.0",  // Explicitly set to listen on all interfaces
-    port: 8080,
   },
   base: "/", // Set base for GitHub Pages
   plugins: [

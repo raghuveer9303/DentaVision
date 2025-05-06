@@ -22,6 +22,8 @@ RUN npm install -g serve
 
 # Expose the port Vite preview/serve uses by default
 EXPOSE 4173
+EXPOSE 10000
+EXPOSE 8080
 
 # Start the production server
-CMD ["serve", "-s", "dist", "-l", "4173"]
+CMD ["serve", "-s", "dist", "-l", "8080"]
