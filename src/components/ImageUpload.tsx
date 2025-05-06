@@ -56,7 +56,7 @@ const ImageUpload = () => {
       const formData = new FormData();
       formData.append('file', blob, 'image.jpg');
 
-      const response = await fetch('https://dviz.raghuveervenkatesh.us/predict', {
+      const response = await fetch('https://raghuserver.tail769edb.ts.net:8005/predict', {
         method: 'POST',
         body: formData,
       });
