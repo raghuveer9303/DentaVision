@@ -2,8 +2,8 @@
 Web-app : dentavision.onrender.com
 
 For more details refer the below resources:
-Report : [Project Report](/Models/DentalVision.pdf)
-YouTube : [YTVideo](https://www.youtube.com/watch?v=YK43UQPcwUM)
+- Report : [Project Report](/Models/DentalVision.pdf)
+- YouTube : [YTVideo](https://www.youtube.com/watch?v=YK43UQPcwUM)
 
 ## Disclaimer
 - We **do not store or log any uploaded images**. All predictions are processed in-memory and discarded immediately after inference.
