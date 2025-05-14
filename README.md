@@ -2,6 +2,8 @@
 
 DentaVision is an AI-powered dental condition detection system that uses computer vision to identify various dental conditions from images. The system consists of a modern web frontend and a powerful backend service powered by Vision Transformer (ViT) model.
 
+LIVE PROJECT LINK: https://dentavision.onrender.com/ 
+
 ## Project Overview
 
 DentaVision helps dental professionals and patients identify common dental conditions through image analysis. The system can detect:
