@@ -1,103 +1,35 @@
-# DentaVision
+# 🦷 DentaVision – AI-Powered Dental Disease Detection
+Web-app : [dentavision.onrender.com](https://dentavision.onrender.com/)
 
-DentaVision is an AI-powered dental condition detection system that uses computer vision to identify various dental conditions from images. The system consists of a modern web frontend and a powerful backend service powered by Vision Transformer (ViT) model.
+For more details refer the below resources:
+- Report : [Project Report](/Models/DentalVision.pdf)
+- YouTube : [YTVideo](https://www.youtube.com/watch?v=YK43UQPcwUM)
 
-LIVE PROJECT LINK: https://dentavision.onrender.com/ 
+## Disclaimer
+- We **do not store or log any uploaded images**. All predictions are processed in-memory and discarded immediately after inference.
+- Due to the **limited diversity in training data**, the model may not perform well on edge cases such as unusual angles, poor lighting, or non-standard oral conditions.
+- The system currently **treats all uploaded images as valid dental inputs**. It may still produce predictions even on irrelevant or incorrect images.
+- This tool is intended for **educational and demonstration purposes only**. It should **not be considered a substitute for professional dental advice, diagnosis, or treatment**.
 
-## Project Overview
+## Dataset
+We used two publicly available datasets from Kaggle:
+- [Oral Diseases Dataset](https://www.kaggle.com/datasets/salmansajid05/oral-diseases)
+- [Healthy Tooth Dataset](https://www.kaggle.com/datasets/alielhenidy/tooth-dataset)
 
-DentaVision helps dental professionals and patients identify common dental conditions through image analysis. The system can detect:
-- Calculus
-- Caries
-- Gingivitis
-- Hypodontia
-- Mouth Ulcer
-- Tooth Discoloration
-- Healthy teeth
+## Models Implemented
+| Model                   | Description                                                                 |
+|-------------------------|-----------------------------------------------------------------------------|
+| Vanilla CNN             | Basic convolutional neural network (CNN).       |
+| CNN with Attention      | Enhanced CNN with spatial attention to focus on diagnostically relevant regions. |
+| EfficientNet-B0         | Pretrained model fine-tuned on dental images using compound scaling.        |
+| Pretrained ViT (vit_tiny_patch16_224) | Lightweight transformer model fine-tuned on 15K+ images; best-performing model. |
 
-## Architecture
+## 📊 Results
+Below find the accuracy and loss curves for the pre-trained ViT.
+![Accuracy and Loss curves](Result_curves.png)
 
-The project is divided into two main components:
+Below plot shows the class wise precision, recall and F1 score for the highest performing model, pre-trained ViT.
+![F1 Score](Result_F1Score.png)
 
-### Frontend
-- Modern React application with TypeScript
-- Built with Vite
-- Uses shadcn/ui components
-- Responsive design with Tailwind CSS
-- See [Frontend README](./Frontend/README.md) for more details
-
-### Backend
-- FastAPI-based REST API
-- Vision Transformer (ViT) model for image analysis
-- Docker support
-- See [Backend README](./Backend/README.md) for more details
-
-## Getting Started
-
-### Prerequisites
-- Node.js 16+ (for Frontend)
-- Python 3.8+ (for Backend)
-- Docker (optional)
-
-### Running Locally
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/dentavision.git
-cd dentavision
-```
-
-2. Set up the Backend:
-```bash
-cd Backend
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-python main.py
-```
-
-3. Set up the Frontend:
-```bash
-cd Frontend
-npm install
-npm run dev
-```
-
-4. Access the application:
-- Frontend: http://localhost:5173
-- Backend API: http://localhost:8005
-
-### Running with Docker
-
-1. Build and run the Backend:
-```bash
-cd Backend
-docker build -t dentavision-backend .
-docker run -p 8005:8005 dentavision-backend
-```
-
-2. Build and run the Frontend:
-```bash
-cd Frontend
-docker build -t dentavision-frontend .
-docker run -p 8080:8080 dentavision-frontend
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Vision Transformer (ViT) model for image analysis
-- FastAPI for the backend framework
-- React and Vite for the frontend framework
-- shadcn/ui for the component library
+Below find the accuracy comparison for all the models.
+<img src="Result_comparison.png" alt="Result Comparison" width="50%">
