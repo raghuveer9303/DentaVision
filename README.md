@@ -25,11 +25,11 @@ We used two publicly available datasets from Kaggle:
 | Pretrained ViT (vit_tiny_patch16_224) | Lightweight transformer model fine-tuned on 15K+ images; best-performing model. |
 
 ## 📊 Results
-Below find the accuracy and loss curves for the pre-trained ViT.
-![Accuracy and Loss curves](Result_curves.png)
+Below find the accuracy and loss curves for the pre-trained ViT.  
+![Accuracy and Loss curves](/Models/Result_curves.png)
 
-Below plot shows the class wise precision, recall and F1 score for the highest performing model, pre-trained ViT.
-![F1 Score](Result_F1Score.png)
+Below plot shows the class wise precision, recall and F1 score for the highest performing model, pre-trained ViT.  
+![F1 Score](/Models/Result_F1Score.png)
 
-Below find the accuracy comparison for all the models.
-<img src="Result_comparison.png" alt="Result Comparison" width="50%">
+Below find the accuracy comparison for all the models.  
+<img src="/Models/Result_comparison.png" alt="Result Comparison" width="50%">
