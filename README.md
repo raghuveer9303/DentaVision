@@ -31,5 +31,6 @@ Below find the accuracy and loss curves for the pre-trained ViT.
 Below plot shows the class wise precision, recall and F1 score for the highest performing model, pre-trained ViT.  
 ![F1 Score](/Models/Result_F1Score.png)
 
-Below find the accuracy comparison for all the models.  
+Below find the accuracy comparison for all the models.
+
 <img src="/Models/Result_comparison.png" alt="Result Comparison" width="50%">
