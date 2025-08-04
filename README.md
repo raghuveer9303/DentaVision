@@ -1,5 +1,5 @@
 # 🦷 DentaVision – AI-Powered Dental Disease Detection
-Web-app : [dentavision.onrender.com](https://dentalvision.onrender.com/)
+Web-app : [dentalvision.onrender.com](https://dentalvision.onrender.com/)
 
 For more details refer the below resources:
 - Report : [Project Report](/Models/DentalVision.pdf)
