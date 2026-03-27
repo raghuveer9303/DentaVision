@@ -1,5 +1,7 @@
 fastapi
 uvicorn[standard]
-timm
+timm==0.9.16
+torch
+torchvision
 pillow
 python-multipart
