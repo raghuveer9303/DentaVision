@@ -15,6 +15,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        "https://dentalvision.onrender.com",
         "http://localhost:5173",
         "http://localhost:8080",
         "https://dentavision.onrender.com"
