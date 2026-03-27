@@ -9,7 +9,7 @@ import os
 from torch.serialization import add_safe_globals
 from timm.models.vision_transformer import VisionTransformer
 
-app = FastAPI()
+app = FastAPI(redirect_slashes=False)
 
 # Add CORS middleware
 app.add_middleware(
