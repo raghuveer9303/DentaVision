@@ -44,7 +44,7 @@ class_names = [
     'healthy'
 ]
 
-@app.post('/predict/')
+@app.post('/predict')
 async def predict(file: UploadFile = File(...)):
     # Verify file format
     if not file.filename.lower().endswith(('.png', '.jpg', '.jpeg')):
