@@ -25,13 +25,6 @@ flowchart LR
     API -->|model load on startup| W
 ```
 
-## What Makes This Production-Grade
-
-- Solves runtime instability from malformed input by enforcing file-type validation and guarded image decoding before inference.
-- Solves deployment friction by containerizing frontend and backend with reproducible Docker images.
-- Solves latency unpredictability by keeping model loaded in-memory and running single-pass GPU/CPU inference without retraining-time overhead.
-- Solves frontend-backend integration failures by explicit CORS configuration and stable JSON response contracts (`prediction` / `error`).
-
 ## Performance / Impact
 
 | Component / Model | Metric | Value | vs Baseline |
